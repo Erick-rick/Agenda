@@ -1,7 +1,10 @@
 const Login = require('../models/LoginModel');
 
 exports.index = (req, res) =>{
-    res.render('login');
+   // console.log(req.session.user);
+   if(req.session.user) 
+        return res.render('login-logado');
+    return res.render('login');
 };
 
 //cadastro login
@@ -31,6 +34,7 @@ exports.register = async function(req, res){
     } 
 };
 
+// Fazer Login
 exports.login = async function(req, res){
     try {
         const login = new Login(req.body);
@@ -56,4 +60,10 @@ exports.login = async function(req, res){
         console.log(e);
         return res.render('404');
     } 
+};
+
+//Fazer Logout da Agenda
+exports.logout = function(req, res){
+    req.session.destroy();
+    res.redirect('/');
 };

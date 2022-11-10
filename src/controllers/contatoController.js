@@ -1,3 +1,3 @@
-exports.paginaInicial = (req, res) => {
-  res.send('Obrigado por entrar em contato.');
+exports.index = (req, res) => {
+  res.render('contato');
 };

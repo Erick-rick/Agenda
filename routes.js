@@ -8,13 +8,14 @@ const contatoController = require('./src/controllers/contatoController');
 route.get('/', homeController.paginaInicial);
 route.post('/', homeController.trataPost);
 
-// Rotas de contato
-route.get('/contato', contatoController.paginaInicial);
-
 // Rotas de Login
 route.get('/login/index', loginController.index);
 route.post('/login/register', loginController.register);
 route.post('/login/login', loginController.login);
+route.get('/login/logout', loginController.logout);
+
+// Rotas de contato
+route.get('/contato/index', contatoController.index);
 
 
 module.exports = route;
