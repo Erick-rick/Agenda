@@ -1,8 +1,9 @@
 //npm i validator
 // npm i bcryptjs  - Criptografia para senha
-const validator = require('validator');
+
+validator = require('validator');const 
 const bcryptjs = require('bcryptjs');
-/*
+  /*
 const mongoose = require('mongoose');
 
 const LoginSchema = new mongoose.Schema({
@@ -11,7 +12,7 @@ const LoginSchema = new mongoose.Schema({
 });
 
 const LoginModel = mongoose.model('Login', LoginSchema);
-*/
+  */
 
 class Login {
   constructor(body){
@@ -89,3 +90,4 @@ class Login {
 }
 
 module.exports = Login;
+
