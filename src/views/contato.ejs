@@ -1,4 +1,3 @@
-<%- include('includes/head') %>
 <%- include('includes/nav') %>
 
 <div class="container">
@@ -12,7 +11,13 @@
 
       <!--%- include('includes/message') %>-->
 
+      <% if(contato._id) { %>
+      <form action="/contato/edit/<%= contato.id %>" method="post">
+
+      <% } else { %>
       <form action="/contato/register" method="post">
+
+      <% } %>
         <div class="form-group">
           <label>Nome</label>
           <input value="<%= contato.nome %>" type="text" class="form-control" name="nome">
