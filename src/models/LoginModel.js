@@ -1,7 +1,7 @@
 //npm i validator
 // npm i bcryptjs  - Criptografia para senha
 
-validator = require('validator');const 
+validator = require('validator');
 const bcryptjs = require('bcryptjs');
   /*
 const mongoose = require('mongoose');
